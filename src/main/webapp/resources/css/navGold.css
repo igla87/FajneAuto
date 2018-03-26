@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: calibri;
+	font-size: 20px;
+	font-style: italic;
+	font-weight: bold;
+	text-decoration: none;
+}
+html {
+	background-color: #222222;
+}
+
+/* Menu g³ówne */
+.menuBar {
+	height: 50px;
+	background-color: #DAA520;
+}
+.mainMenu {
+	margin: 0 auto;
+	width: 900px;
+}
+
+/* elementy menu */
+ol {
+    list-style-type: none;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+ol a {
+    display: block;
+    color: #222222;
+}
+
+ol > li {
+    float: left;
+    width: 180px;
+    height: 50px;
+}
+
+ol > li:hover > ul {
+    display: block;
+}
+
+/* czêœæ rozwijana menu */
+
+ol > li > ul {
+    display: none;
+    list-style-type: none;
+}
+
+ol > li > ul > li {
+    position: relative;
+    background-color: #222222;
+}
+
+
+ol > li > ul > li:hover > a {
+    color: #222222;
+}
+
+ul > li > a {
+    color: #DAA520;
+}
+
+ol > li > ul > li > a {
+    border: 1px solid #DAA520;
+}
+
+ol > li > ul > li:hover {
+    background-color: #DAA520;
+}

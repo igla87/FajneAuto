@@ -1,0 +1,69 @@
+.content {
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.topColumns {
+	display: flex;
+	margin: 0 auto;
+	width: 900px;
+}
+
+.column {
+	display: inline-block;
+	margin: 0 auto;
+	width: 400px;
+	height: 100%;
+}
+
+.elementBox {
+	display: block;
+	width: 400px;
+	height: 70px;
+	line-height: 70px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+p, .input {
+	color: #DAA520;
+	text-align: left;
+}
+
+p {
+	height: 35px;
+	line-height: 35px;
+}
+
+.input {
+	border: 2px solid #DAA520;
+	background-color: #222222;
+	padding-left: 5px;
+	height: 31px;
+	width: 391px;
+}
+
+.inputBox {
+	height: 35px;
+	line-height: 35px;
+}
+
+.button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 50px;
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 2px solid #DAA520;
+	color: #DAA520;
+	background-color: #222222;
+}
+
+.button:hover {
+	background-color: #DAA520;
+	color: #222222;
+	cursor: pointer;
+}

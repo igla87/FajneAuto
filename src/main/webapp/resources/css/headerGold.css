@@ -1,0 +1,16 @@
+@charset "UTF-8";
+header {
+	margin: 15px auto;
+	width: 900px;
+}
+.titleGrey, .titleGold {
+	font-family: franklin gothic medium;
+}
+.titleGrey {
+	font-size: 24px;
+	color: #BBBBBB;
+}
+.titleGold {
+	font-size: 28px;
+	color: #DAA520;
+}

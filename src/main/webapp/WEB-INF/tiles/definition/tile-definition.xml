@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<!-- SZABLONY PODSTAWOWE -->
+
+	<definition name="layoutGOLD" template="/WEB-INF/tiles/template/layout.jsp">
+		<put-attribute name="title" value="FajneAuto" />
+		<put-attribute name="navigation" value="/WEB-INF/tiles/template/navigationGold.jsp" />
+		<put-attribute name="content" value="" />
+		<put-list-attribute name="cssFiles"/>
+	</definition>
+	
+	<definition name="layoutGOLD_WithSubtitle" template="/WEB-INF/tiles/template/layoutSubGold.jsp">
+		<put-attribute name="title" value="FajneAuto" />
+		<put-attribute name="navigation" value="/WEB-INF/tiles/template/navigationGold.jsp" />
+		<put-attribute name="subtitle" value="" />
+		<put-attribute name="content" value="" />
+		<put-list-attribute name="cssFiles"/>
+	</definition>
+	
+	<definition name="layoutGREEN_WithSubtitle" template="/WEB-INF/tiles/template/layoutSubGreen.jsp">
+		<put-attribute name="title" value="FajneAuto" />
+		<put-attribute name="navigation" value="/WEB-INF/tiles/template/navigationGreen.jsp" />
+		<put-attribute name="subtitle" value="" />
+		<put-attribute name="content" value="" />
+		<put-list-attribute name="cssFiles"/>
+	</definition>
+	
+	<!-- STRONY SERWISU -->
+	
+	<definition name="temp" extends="layoutGOLD">
+		<put-attribute name="content" value="/WEB-INF/views/temp.jsp" />
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/mainGoldCss.jsp" />
+		</put-list-attribute>
+	</definition>
+	
+	<!-- strona główna -->
+	<definition name="index" extends="layoutGOLD">
+		<put-attribute name="content" value="/WEB-INF/views/main.jsp" />
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/mainGoldCss.jsp" />
+		</put-list-attribute>
+	</definition>
+	
+	<!-- nowe auta - menu -->
+	<definition name="nowe" extends="layoutGOLD">
+		<put-attribute name="content" value="/WEB-INF/views/nowe.menu.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/mainGoldCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajem - menu -->
+	<definition name="wynajem" extends="layoutGOLD">
+		<put-attribute name="content" value="/WEB-INF/views/wynajem.menu.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/mainGoldCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajem - formularz -->
+	<definition name="wynajem/formularz" extends="layoutGOLD_WithSubtitle">
+		<put-attribute name="subtitle" value="WYNAJEM" />
+		<put-attribute name="content" value="/WEB-INF/views/wynajem.formularz.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/rent.formCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+
+	<!-- logowanie - formularz -->
+	<definition name="login" extends="layoutGOLD_WithSubtitle">
+		<put-attribute name="subtitle" value="LOGOWANIE" />
+		<put-attribute name="content" value="/WEB-INF/views/login.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/loginCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- logowanie - info błędu -->
+	<definition name="loginfailed" extends="layoutGOLD">
+		<put-attribute name="content" value="/WEB-INF/views/loginfailed.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/loginCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- logowanie - info wylogowania -->
+	<definition name="logout" extends="layoutGOLD">
+		<put-attribute name="content" value="/WEB-INF/views/logout.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/loginCss.jsp" />
+		</put-list-attribute>	
+	</definition>	
+	
+	<!-- rejestracja - formularz -->
+	<definition name="konto/rejestracja" extends="layoutGOLD_WithSubtitle">
+		<put-attribute name="subtitle" value="REJESTRACJA" />
+		<put-attribute name="content" value="/WEB-INF/views/konto.rejestracja.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/account.registerCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- konto - menu -->
+	<definition name="konto" extends="layoutGOLD">
+		<put-attribute name="content" value="/WEB-INF/views/konto.menu.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/mainGoldCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- konto - dane zalogowanego klienta -->
+	<definition name="konto/dane" extends="layoutGOLD_WithSubtitle">
+		<put-attribute name="subtitle" value="DANE UŻYTKOWNIKA" />
+		<put-attribute name="content" value="/WEB-INF/views/konto.dane.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/account.dataCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- konto - edycja danych -->
+	<definition name="konto/dane/edytuj" extends="layoutGOLD_WithSubtitle">
+		<put-attribute name="subtitle" value="DANE UŻYTKOWNIKA" />
+		<put-attribute name="content" value="/WEB-INF/views/konto.dane.edytuj.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/account.data.editCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- konto - edycja hasła -->
+	<definition name="konto/dane/haslo" extends="layoutGOLD_WithSubtitle">
+		<put-attribute name="subtitle" value="DANE UŻYTKOWNIKA" />
+		<put-attribute name="content" value="/WEB-INF/views/konto.dane.haslo.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/account.data.passwordCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- konto - lista zamówień klienta -->
+	<definition name="konto/zamowienia" extends="layoutGOLD_WithSubtitle">
+		<put-attribute name="subtitle" value="ZAMÓWIENIA" />
+		<put-attribute name="content" value="/WEB-INF/views/konto.zamowienia.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/mainGoldCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- PANEL ADMINISTRATORA -->
+	
+	<!-- menu główne -->
+	<definition name="admin" extends="layoutGREEN_WithSubtitle">
+		<put-attribute name="subtitle" value="PANEL ADMINISTRATORA" />
+		<put-attribute name="content" value="/WEB-INF/views/admin.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/mainGreen2Css.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajmu - menu -->
+	<definition name="admin/wynajem" extends="layoutGREEN_WithSubtitle">
+		<put-attribute name="subtitle" value="PANEL ADMINISTRATORA  ->  WYNAJEM" />
+		<put-attribute name="content" value="/WEB-INF/views/admin.wynajem.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/mainGreenCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajem - lista klas aut do wynajęcia -->
+	<definition name="admin/wynajem/auta" extends="layoutGREEN_WithSubtitle">
+		<put-attribute name="subtitle" value="PANEL ADMINISTRATORA  ->  WYNAJEM" />
+		<put-attribute name="content" value="/WEB-INF/views/admin.wynajem.auta.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/admin.rent.listCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajem - edycja klasy auta -->
+	<definition name="admin/wynajem/auta/edytuj" extends="layoutGREEN_WithSubtitle">
+		<put-attribute name="subtitle" value="PANEL ADMINISTRATORA  ->  WYNAJEM" />
+		<put-attribute name="content" value="/WEB-INF/views/admin.wynajem.auta.edytuj.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/admin.rent.editCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajem - dodanie nowej klasy auta -->
+	<definition name="admin/wynajem/auta/dodaj" extends="layoutGREEN_WithSubtitle">
+		<put-attribute name="subtitle" value="PANEL ADMINISTRATORA  ->  WYNAJEM" />
+		<put-attribute name="content" value="/WEB-INF/views/admin.wynajem.auta.dodaj.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/admin.rent.editCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajem - lista miejsc odbioru -->
+	<definition name="admin/wynajem/miejsca" extends="layoutGREEN_WithSubtitle">
+		<put-attribute name="subtitle" value="PANEL ADMINISTRATORA  ->  WYNAJEM" />
+		<put-attribute name="content" value="/WEB-INF/views/admin.wynajem.miejsca.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/admin.rent.listCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajem - edycja miejsca odbioru -->
+	<definition name="admin/wynajem/miejsca/edytuj" extends="layoutGREEN_WithSubtitle">
+		<put-attribute name="subtitle" value="PANEL ADMINISTRATORA  ->  WYNAJEM" />
+		<put-attribute name="content" value="/WEB-INF/views/admin.wynajem.miejsca.edytuj.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/admin.rent.editCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajem - dodanie nowego miejsca odbioru -->
+	<definition name="admin/wynajem/miejsca/dodaj" extends="layoutGREEN_WithSubtitle">
+		<put-attribute name="subtitle" value="PANEL ADMINISTRATORA  ->  WYNAJEM" />
+		<put-attribute name="content" value="/WEB-INF/views/admin.wynajem.miejsca.dodaj.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/admin.rent.editCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajem - lista okresów wynajmu -->
+	<definition name="admin/wynajem/okresy_wynajmu" extends="layoutGREEN_WithSubtitle">
+		<put-attribute name="subtitle" value="PANEL ADMINISTRATORA  ->  WYNAJEM" />
+		<put-attribute name="content" value="/WEB-INF/views/admin.wynajem.okresy_wynajmu.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/admin.rent.listCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajem - edycja okresu wynajmu -->
+	<definition name="admin/wynajem/okresy_wynajmu/edytuj" extends="layoutGREEN_WithSubtitle">
+		<put-attribute name="subtitle" value="PANEL ADMINISTRATORA  ->  WYNAJEM" />
+		<put-attribute name="content" value="/WEB-INF/views/admin.wynajem.okresy_wynajmu.edytuj.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/admin.rent.editCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+	
+	<!-- wynajem - dodanie nowego okresu wynajmu -->
+	<definition name="admin/wynajem/okresy_wynajmu/dodaj" extends="layoutGREEN_WithSubtitle">
+		<put-attribute name="subtitle" value="PANEL ADMINISTRATORA  ->  WYNAJEM" />
+		<put-attribute name="content" value="/WEB-INF/views/admin.wynajem.okresy_wynajmu.dodaj.jsp" />	
+		<put-list-attribute name="cssFiles">
+			<add-attribute value="/WEB-INF/tiles/cssFiles/admin.rent.editCss.jsp" />
+		</put-list-attribute>	
+	</definition>
+</tiles-definitions>

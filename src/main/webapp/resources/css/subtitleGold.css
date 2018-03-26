@@ -1,0 +1,13 @@
+.subtitle {
+	margin: 0 auto;
+	width: 900px;
+	margin-top: 50px;
+	margin-bottom: 15px;
+	color: #DAA520;
+}
+hr {
+	margin: 0 auto;
+	width: 900px;
+	size: 3px;
+	border-color: #DAA520;
+}

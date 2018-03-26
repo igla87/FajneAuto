@@ -1,0 +1,22 @@
+.content {
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 50px;
+	display: flex;
+}
+
+.button {
+	display: inline-block;
+	margin: 25px auto;
+	width: 250px;
+	height: 400px;
+	line-height: 400px;
+	text-align: center;
+	border: 2px solid #DAA520;
+	color: #DAA520;
+}
+
+.button:hover {
+	background-color: #DAA520;
+	color: #222222;
+}

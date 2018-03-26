@@ -1,0 +1,69 @@
+.content {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.btnBox {
+	display: flex;
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.button {
+	display: inline-block;
+	margin: 0 auto;
+	width: 400px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 2px solid #00FF00;
+	color: #00FF00;
+	background-color: #222222;
+	font-size: 18px;
+}
+
+.button:hover {
+	background-color: #00FF00;
+	color: #222222;
+	cursor: pointer;
+}
+
+.line {
+	border-width: 0px;
+	border-top: 1px solid #00FF00;
+	width: 600px;
+}
+
+.row {
+	height: 60px;
+	line-height: 60px;
+	width: 600px;
+	margin: 0 auto;
+}
+
+.name {
+	display: inline-block;
+	padding-left: 25px;
+	width: 330px;
+	color: #CCCCCC;
+}
+
+.button2 {
+	display: inline-block;
+	margin: 0 auto;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #222222;
+	background-color: #00FF00;
+	font-size: 14px;
+}
+
+.button2:hover {
+	background-color: #008800;
+	color: #222222;
+	cursor: pointer;
+}

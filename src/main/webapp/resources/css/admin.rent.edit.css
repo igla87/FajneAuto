@@ -1,0 +1,46 @@
+.content {
+	width: 900px;
+	margin: 0 auto;
+	margin-top: 50px;
+	display: block;
+	border: none;
+}
+
+p {
+	margin: 0 auto;
+	color: #00FF00;
+	background-color: #222222;
+	text-align: center;
+}
+
+.inputField {
+	display: block;
+	margin: 10px auto;
+	border: solid 2px #00FF00;
+	width: 400px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	color: #00FF00;
+	background-color: #222222;
+	font-size: 24px;
+}
+
+.button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 100px;
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border: 2px solid #00FF00;
+	color: #00FF00;
+	background-color: #222222;
+}
+
+.button:hover {
+	background-color: #00FF00;
+	color: #222222;
+	cursor: pointer;
+}
